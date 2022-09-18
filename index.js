@@ -43,7 +43,13 @@ function checkAnswer(currentLevel) {
         setTimeout(function() {
             $("body").removeClass("game-over");
         }, 200);
-        $("h1").html("<h1>Game Over, Press <button id='start-btn'><i class='fa-solid fa-play fa-4x'></i></button> to Restart<h1>")
+        $("h1").html("<h1>Game Over, Press <button id='start-over-btn'><i class='fa-solid fa-play fa-4x'></i></button> to Restart<h1>")
+        // startOver();
+        $("#start-over-btn").click(function() {
+            level = 0;
+            gamePattern = [];
+            nextSequence();
+        });
         // console.log("Wrong");
     }
 }
